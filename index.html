@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="script.js" defer></script>
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container-md">
         <!--Drag & drop-->
         <h2 class="h2">Drag and drop the words to make a sentence</h2>
         <div id="wordContainer">
@@ -27,21 +28,22 @@
             <div class="drop-zone" data-position="5"></div>
         </div><br>
     
-        <button class="btn" id="checkButton" onclick="checkOrder()">Check Order</button><br><br>
+        <button class="btn btn-primary" id="checkButton" onclick="checkOrder()">Check Order</button><br><br>
     
         <div class="result" id="result1"></div>
 
         <!--Fill in the blank-->
         <br><br>
         <h2 class="h2">Fill in the blank</h2>
-        <div id="question">
+        <div id="question" class="mb-3">
             The bag is __________ than the coat. (cheap)
         </div>
-    
-        <label for="answerInput">Your Answer:</label>
-        <input type="text" id="answerInput">
-    
-        <button class="btn" id="submitButton" onclick="checkAnswer()">Submit</button><br><br>
+        <div class="mb-3">
+          <label for="answerInput">Your Answer:</label>
+          <input type="text" id="answerInput">
+        </div>
+        <br>
+        <button class="btn btn-primary" id="submitButton" onclick="checkAnswer()">Submit</button><br><br>
     
         <div class="result" id="result2"></div>
 
@@ -50,34 +52,45 @@
         <h2 class="h2">Select the correct answer</h2>
         <form id="quizForm">
             <div id="question1">
-              <p>1. What time is it?</p>
-              <label>
-                <input type="radio" name="q1" value="a"> Thank you, and you?
-              </label>
-              <label>
-                <input type="radio" name="q1" value="b"> 10:15
-              </label>
-              <label>
-                <input type="radio" name="q1" value="c"> Madrid
-              </label>
+              <div class="mb-3"><p>1. What time is it?</p></div>
+              <div class="mb-3">
+                <label>
+                  <input type="radio" name="q1" value="a"> Thank you, and you?
+                </label>
+              </div>
+              <div class="mb-3">
+                <label>
+                  <input type="radio" name="q1" value="b"> 10:15
+                </label>
+              </div>
+              <div class="mb-3">
+                <label>
+                  <input type="radio" name="q1" value="c"> Madrid
+                </label>
+              </div>
             </div>
         
             <div id="question2">
-              <p>2. Whose book is this?</p>
-              <label>
-                <input type="radio" name="q2" value="a"> Me
-              </label>
-              <label>
-                <input type="radio" name="q2" value="b"> I
-              </label>
-              <label>
-                <input type="radio" name="q2" value="c"> Mine
-              </label>
-            </div><br>
-        
-            <button class="btn" type="button" onclick="checkAnswers()">Check Answers</button>
+              <div class="mb-3"><p>2. Whose book is this?</p></div>
+              <div class="mb-3">
+                <label>
+                  <input type="radio" name="q2" value="a"> Me
+                </label>
+              </div>
+              <div class="mb-3">
+                <label>
+                  <input type="radio" name="q2" value="b"> I
+                </label>
+              </div>
+              <div class="mb-3">
+                <label>
+                  <input type="radio" name="q2" value="c"> Mine
+                </label>
+              </div>
+            </div>
           </form><br>
-        
+          <button class="btn btn-primary" type="button" onclick="checkAnswers()">Check Answers</button>
+          <br><br>
           <div class="result" id="result3"></div>
     </div>
     
