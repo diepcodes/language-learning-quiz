@@ -19,7 +19,7 @@ let draggedItem = null;
             dropZones.forEach((dropZone, index) => {
                 const word = dropZone.querySelector('.draggable');
                 if (word && word.textContent !== `Word ${index + 1}`) {
-                    correctOrder = false;
+                    correctOrder = true;
                 }
             });
 
@@ -28,7 +28,7 @@ let draggedItem = null;
 
         function showResult(correctOrder) {
             const resultElement = document.getElementById('result1');
-            resultElement.textContent = correctOrder ? 'Correct Order!' : 'Incorrect Order!';
+            resultElement.textContent = correctOrder ? 'Oikein!' : 'Ei ihan!';
 
             // setTimeout(() => {
             //     resultElement.textContent = '';
@@ -47,12 +47,12 @@ let draggedItem = null;
 // Fill in the blank
 function checkAnswer() {
     const userAnswer = document.getElementById('answerInput').value.toLowerCase();
-    const correctAnswer = "cheaper";
+    const correctAnswer = "billigare";
 
     if (userAnswer === correctAnswer) {
-        displayResult("Correct!");
+        displayResult("Oikein!");
     } else {
-        displayResult("Incorrect. Try again!");
+        displayResult("Ei ihan. Yritä uudelleen!");
     }
 }
 
@@ -64,7 +64,7 @@ function displayResult(message) {
 
 function checkAnswers() {
     const answers = {
-      q1: "b", // Correct answer for question 1
+      q1: "a", // Correct answer for question 1
       q2: "c"  // Correct answer for question 2
     };
 
@@ -81,7 +81,7 @@ function checkAnswers() {
     });
 
     const resultElement = document.getElementById('result3');
-    resultElement.innerHTML = `Your score is ${score} out of ${Object.keys(answers).length}.`;
+    resultElement.innerHTML = `Sait ${score}/${Object.keys(answers).length} oikein!`;
 
   }
         

@@ -11,14 +11,16 @@
 <body>
     <div class="container-md">
         <!--Drag & drop-->
-        <h2 class="h2">Drag and drop the words to make a sentence</h2>
+        <h2 class="h2">Laita sanat oikeaan järjestykseen!</h2><br>
+        <p>Minä rakastan matkustaa ystävien kanssa.</p>
         <div id="wordContainer">
-            <div class="draggable" draggable="true">want</div>
-            <div class="draggable" draggable="true">Santa</div>
-            <div class="draggable" draggable="true">meet</div>
-            <div class="draggable" draggable="true">I</div>
-            <div class="draggable" draggable="true">to</div>
-        </div><br>
+            <div class="draggable" draggable="true">vänner</div>
+            <div class="draggable" draggable="true">älskar</div>
+            <div class="draggable" draggable="true">resa</div>
+            <div class="draggable" draggable="true">jag</div>
+            <div class="draggable" draggable="true">att</div>
+            <div class="draggable" draggable="true">med</div>
+        </div>
     
         <div id="horizontalSpace" class="drop-zone" ondrop="drop(event)" ondragover="allowDrop(event)">
             <div class="drop-zone" data-position="1"></div>
@@ -26,71 +28,72 @@
             <div class="drop-zone" data-position="3"></div>
             <div class="drop-zone" data-position="4"></div>
             <div class="drop-zone" data-position="5"></div>
+            <div class="drop-zone" data-position="6"></div>
         </div><br>
     
-        <button class="btn btn-primary" id="checkButton" onclick="checkOrder()">Check Order</button><br><br>
+        <button class="btn btn-primary" id="checkButton" onclick="checkOrder()">Tarkista vastaus</button><br>
     
         <div class="result" id="result1"></div>
 
         <!--Fill in the blank-->
         <br><br>
-        <h2 class="h2">Fill in the blank</h2>
+        <h2 class="h2">Taivuta suluissa oleva adjektiivi!</h2>
         <div id="question" class="mb-3">
-            The bag is __________ than the coat. (cheap)
+          Väskan är __________ än klänningen. (billig)
         </div>
         <div class="mb-3">
-          <label for="answerInput">Your Answer:</label>
+          <label for="answerInput">Ditt svar: </label>
           <input type="text" id="answerInput">
         </div>
         <br>
-        <button class="btn btn-primary" id="submitButton" onclick="checkAnswer()">Submit</button><br><br>
+        <button class="btn btn-primary" id="submitButton" onclick="checkAnswer()">Tarkista vastaus</button><br>
     
         <div class="result" id="result2"></div>
 
         <!--Multiple-choice quiz-->
         <br>
-        <h2 class="h2">Select the correct answer</h2>
+        <h2 class="h2">Valitse oikea vastaus!</h2>
         <form id="quizForm">
             <div id="question1">
-              <div class="mb-3"><p>1. What time is it?</p></div>
+              <div class="mb-3"><p>1. Vad är klockan?</p></div>
               <div class="mb-3">
                 <label>
-                  <input type="radio" name="q1" value="a"> Thank you, and you?
+                  <input type="radio" name="q1" value="a"> Paljonko kello on?
                 </label>
               </div>
               <div class="mb-3">
                 <label>
-                  <input type="radio" name="q1" value="b"> 10:15
+                  <input type="radio" name="q1" value="b"> Mihin aikaan nukut?
                 </label>
               </div>
               <div class="mb-3">
                 <label>
-                  <input type="radio" name="q1" value="c"> Madrid
+                  <input type="radio" name="q1" value="c"> Missä sinä olet?
                 </label>
               </div>
             </div>
         
             <div id="question2">
-              <div class="mb-3"><p>2. Whose book is this?</p></div>
+              <div class="mb-3"><p>2. Vems bok är detta?</p></div>
               <div class="mb-3">
                 <label>
-                  <input type="radio" name="q2" value="a"> Me
+                  <input type="radio" name="q2" value="a"> Mig
                 </label>
               </div>
               <div class="mb-3">
                 <label>
-                  <input type="radio" name="q2" value="b"> I
+                  <input type="radio" name="q2" value="b"> Jag
                 </label>
               </div>
               <div class="mb-3">
                 <label>
-                  <input type="radio" name="q2" value="c"> Mine
+                  <input type="radio" name="q2" value="c"> Mina
                 </label>
               </div>
             </div>
           </form><br>
-          <button class="btn btn-primary" type="button" onclick="checkAnswers()">Check Answers</button>
-          <br><br>
+          <button class="btn btn-primary" type="button" onclick="checkAnswers()">Tarkista vastaus</button>
+          <br>
           <div class="result" id="result3"></div>
     </div>
     
